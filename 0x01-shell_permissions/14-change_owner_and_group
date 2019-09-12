@@ -1,2 +1,2 @@
 #!/bin/bash
-chown -r berry chgpr -r holberton
+chown -R betty chgpr -R holberton
