@@ -1,2 +1,2 @@
-#!/bin/bahs
+#!/bin/bash
 chmod 751 dir_holberton
