@@ -1,2 +1,2 @@
 #!/bim/bash
-mkdir welcome welcome/to welcome/to/holberton
+mkdir -p welcome/to/holberton
