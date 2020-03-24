@@ -94,7 +94,3 @@ ClientAliveInterval 120
 UseDNS no
 ServerAliveInterval 120
 IdentityFile ~/.ssh/holberton
-SendEnv LANG LC_*
-HashKnownHosts yes
-GSSAPIAuthentication yes
-GSSAPIDelegateCredentials no
