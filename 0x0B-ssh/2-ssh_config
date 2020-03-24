@@ -93,4 +93,3 @@ ClientAliveInterval 120
 # Prevent reverse DNS lookups.
 UseDNS no
 ServerAliveInterval 120
-IdentityFile ~/.ssh/holberton
