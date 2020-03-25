@@ -4,6 +4,8 @@ apt-get -y upgrade
 apt-get -y update
 apt-get -y install nginx
 echo "Ceci n'est pas une page" > /var/www/html/404_error.html
+new="listen 80 default_server;\\n\\tlocation \/redirect_me {\\n\\t\\treturn 301 https:\/\/github.com\/AdrianaAriza;\\n\\t}"
+sudo sed -i "s/listen 80 default_server;/$new/" /etc/nginx/sites-available/default
 new="error_page 404 \/404_error.html;\\n\\tlocation = \/404_error.html {\\n\\t\\troot \/var\/www\/html;\\n\\t\\tinternal;\\n\\t}"
 sudo sed "/listen 80 default_server/a $new_string" /var/www/html/404error.html
 service nginx start
