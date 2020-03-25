@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# nginx
+apt-get -y upgrade
+apt-get -y update
+apt-get -y install nginx
+new="listen 80 default_server;\\n\\tlocation \/redirect_me {\\n\\t\\treturn 301 https:\/\/github.com\/AdrianaAriza;\\n\\t}"
+sudo sed -i "s/listen 80 default_server;/$new/" /etc/nginx/sites-available/default
+service nginx start
