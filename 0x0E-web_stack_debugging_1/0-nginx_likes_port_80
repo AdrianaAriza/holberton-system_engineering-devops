@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#debugg1
+sudo pkill nginx
+n1="listen 80 default_server;"
+n2="listen [::]:80 default_server ipv6only=on;"
+sudo sed -i "s/listen 80:8080/$n1/" /etc/nginx/sites-enabled/default
+sudo sed -i "s/listen [::]:8080 default_server ipv6only=on;/$n2/" /etc/nginx/sites-enabled/default
+
