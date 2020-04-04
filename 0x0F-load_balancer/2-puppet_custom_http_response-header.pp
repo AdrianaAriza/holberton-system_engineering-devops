@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # kill a process
 exec { 'http-header':
   command  => 'sudo apt-get -y upgrade &&
