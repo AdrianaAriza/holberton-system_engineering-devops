@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+#
+sub=('www' 'lb-01' 'web-01' 'web-02')
+
+func (){
+    dig "$1" |  grep -C1 'ANSWER SECTION:' | tail -1 | awk '{print "is a " $4 " record and points to " $5}'
+}
+
+if [ -z "$2" ]
+   then
+	for i in "${sub[@]}"
+	do
+	    printf "The subdomain $i " 
+	    func "$i.$1"
+	done
+else
+    printf "The subdomain $2 " 
+    func "$2.$1"
+fi
