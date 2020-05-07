@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""subscribers"""
+""""""
 
 import requests
 
