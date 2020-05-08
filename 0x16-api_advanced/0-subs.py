@@ -10,4 +10,4 @@ def number_of_subscribers(subreddit):
     if req.status_code != 200:
         return 0
     req = req.json()
-    return (req["data"]["subscribers"])
+    return req["data"]["subscribers"]
