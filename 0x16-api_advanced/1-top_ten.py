@@ -10,6 +10,7 @@ def top_ten(subreddit):
                        params={'limit': '10'}, allow_redirects=False)
     if req.status_code != 200:
         print(None)
-    req = req.json()
-    for r in req['data']['children']:
-        print(r['data']['title'])
+    else:
+        req = req.json()
+        for r in req['data']['children']:
+            print(r['data']['title'])
