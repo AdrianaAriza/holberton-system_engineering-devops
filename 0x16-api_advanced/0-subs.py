@@ -1,4 +1,4 @@
-# !/usr/bin/python3
+#!/usr/bin/python3
 """subscribers"""
 import requests
 
@@ -11,4 +11,5 @@ def number_of_subscribers(subreddit):
     if req.status_code != 200:
         return 0
     req = req.json()
-    return req["data"]["subscribers"]
+    x = req["data"]["subscribers"]
+    return x
