@@ -7,10 +7,8 @@ import sys
 if __name__ == "__main__":
     url = "https://jsonplaceholder.typicode.com/users"
     usr = reqs = requests.get(url + "/{}".format(sys.argv[1])).json()
-    print(usr)
     name = usr.get('username')
     reqs = requests.get('{}/{}/todos'.format(url, sys.argv[1])).json()
-    print(reqs)
     rows = []
     for req in reqs:
         row = []
@@ -19,7 +17,6 @@ if __name__ == "__main__":
         row.append(req['completed'])
         row.append(req['title'])
         rows.append(row)
-    print(rows)
     with open("{}.csv".format(row[0]), "w", newline="") as file:
         write = csv.writer(file, delimiter=',',
                            quotechar='"', quoting=csv.QUOTE_ALL)
